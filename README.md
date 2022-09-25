@@ -44,6 +44,11 @@ To build the code successfully a number of dependencies need to be installed:
   This library provide a C API to the Linear Algebra PACKage (LAPACK). LAPACKE
   is included in the [LAPACK](https://github.com/Reference-LAPACK/lapack) repository.
 
+* LAPACK
+
+  As LAPACKE only provides a C API to [LAPACK](https://github.com/Reference-LAPACK/lapack)
+  you still need to have LAPACK installed as well. 
+
 * TCL
 
   The Tool Command Language ([TCL](https://github.com/tcltk/tcl)) is a programming
