@@ -63,10 +63,14 @@ To build the code successfully a number of dependencies need to be installed:
 
 After installing these packages you can generate the project files by running
 ```
-   cmake --DCMAKE_PREFIX_PATH=<your-prefix-path> -H. -Bbuild
+   cmake --DCMAKE_PREFIX_PATH=<your-prefix-path> --DCMAKE_INSTALL_PREFIX=<your-prefix-path> -DTCL_INCLUDE_PATH=<directory-where-tcl.h-lives> -DTCL_LIBRARY=<path-to-libtclm.n.so> -H. -Bbuild
 ```
 Here `your-prefix-path` is the prefix you used to install the dependencies that are
-listed above. This command will generate your project files in the directory `./build`.
+listed above. The `path-to-libtclm.n.so` is the full path of the TCL library you want
+to link to. In this name `m` stands for the major version number and `n` for the minor
+version number, i.e. if you want to use TCL 8.6 then `m=8` and `n=6` and you will be
+linking to `<your-library-directory>/libtcl8.6.so`.
+This command will generate your project files in the directory `./build`.
 For a Linux/Unix system the project files will typically consist of makefiles. In 
 that case running
 ```
