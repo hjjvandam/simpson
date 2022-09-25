@@ -9,6 +9,7 @@ set(
 
 find_package(MPI)
 find_package(CBLAS)
+find_package(LAPACK)
 find_package(LAPACKE)
 find_package(TCL)
 find_package(FFTW3)
@@ -51,5 +52,5 @@ wigner.c)
 add_executable(simpson 
 main.c)
 
-target_link_libraries(simpson LINK_PUBLIC libsimpson ${NFFT_LIBRARIES} ${FFTW3_LIBRARY} ${TCL_LIBRARY} ${LAPACKE_LIBRARIES} ${CBLAS_LIBRARIES} ${MPI_mpi_LIBRARY})
+target_link_libraries(simpson LINK_PUBLIC libsimpson ${NFFT_LIBRARIES} ${FFTW3_LIBRARY} ${TCL_LIBRARY} ${LAPACKE_LIBRARIES} ${LAPACK_LIBRARIES} ${CBLAS_LIBRARIES} ${MPI_mpi_LIBRARY} m)
 
