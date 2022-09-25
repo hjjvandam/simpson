@@ -50,11 +50,11 @@ typedef struct __complx { double re,im; } complx;
     complx Conj(complx z);
     complx Cexpi(double im);
 #else
-    inline complx Complx(double re,double im);
-    inline complx Cadd(complx a,complx b);
-    inline complx Cmul(complx a,complx b);
-    inline complx Conj(complx z);
-    inline complx Cexpi(double im);
+    complx Complx(double re,double im);
+    complx Cadd(complx a,complx b);
+    complx Cmul(complx a,complx b);
+    complx Conj(complx z);
+    complx Cexpi(double im);
 #endif
 
 
@@ -64,7 +64,7 @@ complx Csub(complx a,complx b);
 complx Cdiv(complx a,complx b);
 double  Cabs(complx z);
 complx Csqrt(complx z);
-inline complx RCmul(double x,complx a);
+complx RCmul(double x,complx a);
 complx CRmul(complx a,double x);
 complx Cexp(complx z);
 complx CRexp(double re,double im);
