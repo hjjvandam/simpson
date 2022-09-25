@@ -2,6 +2,11 @@ cmake_minimum_required(VERSION 3.18)
 file(STRINGS "${CMAKE_CURRENT_SOURCE_DIR}/version.txt" VERSION)
 project(simpson VERSION "${VERSION}" LANGUAGES C)
 
+set(
+        CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH}" "${PROJECT_SOURCE_DIR}/cmake"
+        CACHE STRING "" FORCE
+)
+
 find_package(MPI)
 find_package(CBLAS)
 find_package(LAPACKE)
